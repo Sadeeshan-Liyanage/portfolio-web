@@ -104,6 +104,13 @@ body {
   font-weight: 600;
 }
 
+@media (max-width: 1024px) {
+    .navbar a {
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+
 .menu-icon {
   font-size: 3rem;
   color: var(--accent);
