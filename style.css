@@ -348,7 +348,7 @@ h1 span {
     color: var(--accent);
 }
 
-     /* Projects Section */
+                /* Projects Section */
 .projects {
     padding: 10rem 8%;
 }
@@ -394,7 +394,7 @@ h1 span {
 .project-info h3 { font-size: 2.2rem; margin-bottom: 1rem; }
 .project-info p { font-size: 1.5rem; color: var(--text-muted); }
 
-  /* Education Section */
+                             /* Education Section */
 .education {
     padding: 10rem 8%;
     background: rgba(0,0,0,0.1);
