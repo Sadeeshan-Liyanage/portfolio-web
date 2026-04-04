@@ -744,3 +744,8 @@ h1 span {
     margin-bottom: 1rem;
     list-style: none;
 }
+.footer-links ul li a {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    transition: 0.3s;
+}
