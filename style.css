@@ -760,3 +760,7 @@ h1 span {
     margin-right: 2rem;
     transition: 0.3s;
 }
+.social-icons a:hover {
+    color: var(--accent);
+    transform: translateY(-5px);
+}
