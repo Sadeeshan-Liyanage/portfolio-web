@@ -735,3 +735,8 @@ h1 span {
     color: var(--text-muted);
     line-height: 1.6;
 }
+.footer-links h3, .footer-socials h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
