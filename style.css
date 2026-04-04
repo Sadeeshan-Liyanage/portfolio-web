@@ -740,3 +740,7 @@ h1 span {
     margin-bottom: 2rem;
     color: white;
 }
+.footer-links ul li {
+    margin-bottom: 1rem;
+    list-style: none;
+}
