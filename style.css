@@ -246,13 +246,13 @@ h1 span {
   border-radius: 2.4rem;
 }
 
-.image-glow {
-  position: absolute;
-  inset: -20%;
-  background: radial-gradient(circle at 30% 70%, rgba(255,107,0,0.18), transparent 60%);
-  z-index: -1;
-  border-radius: 50%;
-}
+/*.image-glow {*/
+/*  position: absolute;*/
+/*  inset: -20%;*/
+/*  background: radial-gradient(circle at 30% 70%, rgba(255,107,0,0.18), transparent 60%);*/
+/*  z-index: -1;*/
+/*  border-radius: 50%;*/
+/*}*/
 
 
 .about {
