@@ -730,3 +730,8 @@ h1 span {
 .footer-logo h2 span {
     color: var(--accent);
 }
+.footer-logo p {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
