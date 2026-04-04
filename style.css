@@ -749,3 +749,8 @@ h1 span {
     color: var(--text-muted);
     transition: 0.3s;
 }
+
+.footer-links ul li a:hover {
+    color: var(--accent);
+    padding-left: 10px;
+}
