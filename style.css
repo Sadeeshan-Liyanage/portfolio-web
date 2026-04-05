@@ -603,7 +603,7 @@ h1 span {
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: transitionGradient 3s linear infinite;
+    animation: transitionGradient 5s linear infinite;
 }
 
 .contact-info p {
