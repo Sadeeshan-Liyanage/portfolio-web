@@ -748,7 +748,7 @@ h1 span {
 .footer-links ul li a {
     font-size: 1.5rem;
     color: var(--text-muted);
-    transition: 0.3s;
+    transition: 0.322222s;
 }
 
 .footer-links ul li a:hover {
