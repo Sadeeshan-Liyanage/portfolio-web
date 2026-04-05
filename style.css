@@ -228,7 +228,7 @@ h1 span {
 }
 
 .secondary:hover {
-  background: var(--accent);
+  background: var(--accent-dark);
   color: white;
   transform: translateY(-4px);
 }
