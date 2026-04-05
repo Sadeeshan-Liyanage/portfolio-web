@@ -775,6 +775,7 @@ h1 span {
     font-size: 1.3rem;
     color: var(--text-muted);
 }
+
 .scroll-top {
     background: var(--accent);
     color: white;
@@ -787,3 +788,9 @@ h1 span {
     font-size: 1.8rem;
     transition: 0.3s;
 }
+
+.scroll-top:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--accent);
+}
+
