@@ -76,17 +76,17 @@ body {
   text-decoration: none;
 }
 
-/*.logo::after {*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    width: 0;*/
-/*    height: 3px;*/
-/*    bottom: -5px;*/
-/*    left: 50%;*/
-/*    background: linear-gradient(to right, #EA5F5F, #9d4edd);*/
-/*    transition: all 0.4s ease;*/
-/*    transform: translateX(-50%);*/
-/*}*/
+.logo::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 50%;
+    background: linear-gradient(to right, #EA5F5F, #9d4edd);
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
 
 .logo:hover::after {
     width: 100%;
