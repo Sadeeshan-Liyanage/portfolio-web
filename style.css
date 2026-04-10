@@ -433,6 +433,14 @@ h1 span {
     color: var(--text);
 }
 
+.review {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-style: italic;
+    border-left: 3px solid var(--purple);
+    padding-left: 1rem;
+}
                              /* Education Section */
 .education {
     padding: 10rem 8%;
