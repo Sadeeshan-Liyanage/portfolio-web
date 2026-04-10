@@ -444,22 +444,61 @@ h1 span {
 .github-link {
     display: inline-flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
     color: var(--text);
     font-size: 1.5rem;
     text-decoration: none;
     font-weight: 500;
+    transition: 0.3s ease;
     margin-top: auto;
-    transition: 0.3s;
+}
+
+.github-link .arrow-icon {
+    font-size: 1.4rem;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .github-link:hover {
     color: var(--accent);
 }
 
-.github-link i {
-    font-size: 2rem;
+.github-link:hover .arrow-icon {
+    transform: translateX(8px);
+    color: var(--accent);
 }
+
+.btn-view-code {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 5rem;
+    transition: all 0.4s ease;
+    margin-top: auto;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-view-code .arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-view-code:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(234, 95, 95, 0.3);
+    filter: brightness(1.1);
+}
+
+.btn-view-code:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
                              /* Education Section */
 .education {
     padding: 10rem 8%;
