@@ -392,8 +392,11 @@ h1 span {
     background: linear-gradient(to bottom, transparent, rgba(234, 95, 95, 0.1));
 }
 
-.project-info h3 { font-size: 2.2rem; margin-bottom: 1rem; }
-.project-info p { font-size: 1.5rem; color: var(--text-muted); }
+.project-info h3 { font-size: 2.2rem; margin-bottom: 1rem;
+}
+.project-info p { font-size: 1.5rem; color: var(--text-muted);
+}
+
 
                              /* Education Section */
 .education {
