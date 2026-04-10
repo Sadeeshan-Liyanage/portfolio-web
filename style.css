@@ -416,6 +416,23 @@ h1 span {
     gap: 1.5rem;
 }
 
+.exercise-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.exercise-icon {
+    font-size: 3rem;
+    color: var(--accent);
+}
+
+.exercise-card h3 {
+    font-size: 2.2rem;
+    color: var(--text);
+}
+
                              /* Education Section */
 .education {
     padding: 10rem 8%;
