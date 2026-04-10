@@ -441,6 +441,25 @@ h1 span {
     border-left: 3px solid var(--purple);
     padding-left: 1rem;
 }
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: auto;
+    transition: 0.3s;
+}
+
+.github-link:hover {
+    color: var(--accent);
+}
+
+.github-link i {
+    font-size: 2rem;
+}
                              /* Education Section */
 .education {
     padding: 10rem 8%;
