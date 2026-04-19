@@ -26,6 +26,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: var(--gradient);
   background-attachment: fixed;
+    background-repeat: no-repeat;
   color: var(--text);
   min-height: 100vh;
   line-height: 1.6;
