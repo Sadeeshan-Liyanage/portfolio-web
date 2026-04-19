@@ -25,6 +25,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   background: var(--gradient);
+  background-attachment: fixed;
   color: var(--text);
   min-height: 100vh;
   line-height: 1.6;
@@ -93,7 +94,7 @@ body {
     width: 100%;
 }
 
-.logo span { 
+.logo span {
     background: linear-gradient(to right, #EA5F5F, #9d4edd, #ff8533);
     background-size: 200% auto;
     -webkit-background-clip: text;
@@ -316,24 +317,24 @@ h1 span {
   }
 
   @media all  and (max-width: 1300px) {
-          section{
-              grid-template-columns: repeat(3, 1fr);
-          }
+      section{
+          grid-template-columns: repeat(3, 1fr);
+      }
+  }
+    @media all  and (max-width: 1000px) {
+        section{
+            grid-template-columns: repeat(2, 1fr);
         }
-        @media all  and (max-width: 1000px) {
-            section{
-                grid-template-columns: repeat(2, 1fr);
-            }
+    }
+    @media all  and (max-width: 600px) {
+        section{
+            grid-template-columns: repeat(1, 1fr);
         }
-        @media all  and (max-width: 600px) {
-            section{
-                grid-template-columns: repeat(1, 1fr);
-            }
-        }
+    }
 
   .navbar.active { display: flex; }
   .navbar a { margin: 1.8rem 0; font-size: 2.2rem; text-align: center;}
-  
+
   .hero { flex-direction: column; text-align: center;}
   .hero-image { order: -1; }
   .cta-group { justify-content: center;}
@@ -588,7 +589,7 @@ h1 span {
 }
 
 .scrolling-content i {
-    font-size: 3.5rem; 
+    font-size: 3.5rem;
 }
 
 .fa-java { color: #f89820; }
@@ -672,7 +673,7 @@ h1 span {
     box-shadow: 0 5px 15px rgba(234, 95, 95, 0.4);
     filter: brightness(1.4);
     transform: translateY(-8px) scale(1.05);
-    
+
     outline: 2px solid rgba(255, 255, 255, 0.3);
     outline-offset: 2px;
 }
@@ -702,7 +703,7 @@ h1 span {
 
 }
 
-.contact-info h2 { 
+.contact-info h2 {
     background: linear-gradient(to right, #EA5F5F, #9d4edd, #ff8533);
     background-size: 200% auto;
     -webkit-background-clip: text;
@@ -751,7 +752,7 @@ h1 span {
     gap: 2rem;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 1.5rem 2.5rem;
@@ -766,7 +767,7 @@ h1 span {
 }
 
 
-.contact-form input:focus, 
+.contact-form input:focus,
 .contact-form textarea:focus {
     border-color: var(--accent);
     background: rgba(255, 255, 255, 0.08);
@@ -796,7 +797,7 @@ h1 span {
         grid-template-columns: 1fr;
         gap: 5rem;
     }
-    
+
     .contact-info {
         text-align: center;
     }
