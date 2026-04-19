@@ -26,7 +26,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: var(--gradient);
   background-attachment: fixed;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   color: var(--text);
   min-height: 100vh;
   line-height: 1.6;
@@ -318,17 +318,17 @@ h1 span {
   }
 
   @media all  and (max-width: 1300px) {
-      section{
+      .projects-container, .exercises-container{
           grid-template-columns: repeat(3, 1fr);
       }
   }
     @media all  and (max-width: 1000px) {
-        section{
+        .projects-container, .exercises-container{
             grid-template-columns: repeat(2, 1fr);
         }
     }
     @media all  and (max-width: 600px) {
-        section{
+        .projects-container, .exercises-container{
             grid-template-columns: repeat(1, 1fr);
         }
     }
