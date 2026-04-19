@@ -911,12 +911,14 @@ h1 span {
     transform: translateY(0);
 }
 
-/* ----exercise page--- */
+/* --------------------------------------exercise page--------------------------------------------- */
+
 .exercises-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
-    padding: 4rem 0;
+    padding: 4rem 2rem;
+    justify-content: center;
 }
 
 .header-simple {
@@ -929,13 +931,14 @@ h1 span {
     text-align: center;
     max-width: 900px;
     padding-top: 1rem;
+    margin: 0 auto;
 }
 
 .exercise-intro .tagline {
     font-size: 1.8rem;
     color: var(--text-muted);
     line-height: 1.6;
-    margin-left: 1.5rem;
+    margin: 1rem auto 0;
 }
 
 .exercise-intro .heading {
