@@ -55,27 +55,25 @@ window.onload = () => {
 
 
 // ------------------------------------
-// Elements දෙක variable වලට ගැනීම
-const dot = document.getElementById('cursor-dot');
-const outline = document.getElementById('cursor-outline');
+    // window.onload එක ඇතුළත හෝ පිටත මෙය ලිවිය හැකිය
+    const cursor = document.getElementById('magic-cursor');
 
-// මවුස් එක move වන විට ක්‍රියාත්මක වන function එක
-window.addEventListener('mousemove', function (e) {
-    const posX = e.clientX;
-    const posY = e.clientY;
+    window.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
 
-    // elements දෙක පවතිනවාදැයි පරීක්ෂා කිරීම (Safety check)
-    if (dot && outline) {
-        // Dot එක මවුස් එක මැදට ගැනීම
-        dot.style.left = `${posX}px`;
-        dot.style.top = `${posY}px`;
+        // ඇරෝ එක මවුස් එක තිබෙන තැනට ඉතා වේගයෙන් ගෙන යාම
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+    });
 
-        // Outline එක පොඩි delay එකක් සහිතව එන්න transform පාවිච්චි කිරීම
-        outline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    }
-});
-
+// බටන් හෝ ලින්ක් උඩට ගියහම ඇරෝ එකේ පාට වෙනස් කරන්න
+    document.querySelectorAll('a, button').forEach(elem => {
+        elem.addEventListener('mouseenter', () => {
+            cursor.classList.add('cursor-hover');
+        });
+        elem.addEventListener('mouseleave', () => {
+            cursor.classList.remove('cursor-hover');
+        });
+    });
 };
