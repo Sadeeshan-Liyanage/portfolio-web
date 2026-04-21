@@ -49,4 +49,33 @@ window.onload = () => {
 
 
     reveal();
+
+
+
+
+
+// ------------------------------------
+// Elements දෙක variable වලට ගැනීම
+const dot = document.getElementById('cursor-dot');
+const outline = document.getElementById('cursor-outline');
+
+// මවුස් එක move වන විට ක්‍රියාත්මක වන function එක
+window.addEventListener('mousemove', function (e) {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    // elements දෙක පවතිනවාදැයි පරීක්ෂා කිරීම (Safety check)
+    if (dot && outline) {
+        // Dot එක මවුස් එක මැදට ගැනීම
+        dot.style.left = `${posX}px`;
+        dot.style.top = `${posY}px`;
+
+        // Outline එක පොඩි delay එකක් සහිතව එන්න transform පාවිච්චි කිරීම
+        outline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, { duration: 500, fill: "forwards" });
+    }
+});
+
 };

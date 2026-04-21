@@ -1047,3 +1047,41 @@ h1 span {
     }
 }
 
+/*---------------------------------------------scroll curser -----------*/
+
+/* මුළු පිටුවේම default cursor එක නැති කරන්න */
+/*body, a, button {*/
+/*    cursor: none;*/
+/*}*/
+
+/* මැද තියෙන පොඩි Dot එක */
+#cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #00ffff; /* කැමති පාටක් දෙන්න */
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    translate: -50% -50%;
+    /* ඉතා වේගයෙන් මවුස් එක ලුහුබැඳීමට */
+    transition: transform 0.1s ease-out;
+}
+
+/* වටේ තියෙන ලොකු Outline රවුම */
+#cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    translate: -50% -50%;
+    /* පොඩි delay එකක් සහිතව smooth විදිහට ඇදී එන්න */
+    transition: transform 0.15s ease-out;
+}
