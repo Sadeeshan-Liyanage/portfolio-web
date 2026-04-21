@@ -55,19 +55,19 @@ window.onload = () => {
 
 
 // ------------------------------------
-    // window.onload එක ඇතුළත හෝ පිටත මෙය ලිවිය හැකිය
+
     const cursor = document.getElementById('magic-cursor');
 
     window.addEventListener('mousemove', (e) => {
         const x = e.clientX;
         const y = e.clientY;
 
-        // ඇරෝ එක මවුස් එක තිබෙන තැනට ඉතා වේගයෙන් ගෙන යාම
+
         cursor.style.left = x + 'px';
         cursor.style.top = y + 'px';
     });
 
-// බටන් හෝ ලින්ක් උඩට ගියහම ඇරෝ එකේ පාට වෙනස් කරන්න
+
     document.querySelectorAll('a, button').forEach(elem => {
         elem.addEventListener('mouseenter', () => {
             cursor.classList.add('cursor-hover');
