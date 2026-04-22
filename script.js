@@ -54,26 +54,57 @@ window.onload = () => {
 
 
 
-// ------------------------------------
+// ------------------------------------cursor----------------------------------------//
 
     const cursor = document.getElementById('magic-cursor');
+    const container = document.getElementById('particles-container');
+
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
 
     window.addEventListener('mousemove', (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
-
-
-        cursor.style.left = x + 'px';
-        cursor.style.top = y + 'px';
+        mouseX = e.clientX;
+        mouseY = e.clientY;
     });
+
+    function createTrail(x, y) {
+        const dot = document.createElement('div');
+        dot.className = 'trail-dot';
+
+
+        dot.style.left = x + 'px';
+        dot.style.top = y + 'px';
+
+        container.appendChild(dot);
+
+        setTimeout(() => {
+            dot.style.transform = 'scale(0)';
+            dot.style.opacity = '0';
+            setTimeout(() => dot.remove(), 500);
+        }, 50);
+    }
+
+    function animate() {
+
+        cursorX += (mouseX - cursorX) * 0.15;
+        cursorY += (mouseY - cursorY) * 0.15;
+
+        cursor.style.transform = `translate(${cursorX - 15}px, ${cursorY - 15}px)`;
+
+
+        if (Math.abs(mouseX - cursorX) > 0.1) {
+            createTrail(cursorX, cursorY);
+        }
+
+        requestAnimationFrame(animate);
+    }
+    animate();
 
 
     document.querySelectorAll('a, button').forEach(elem => {
-        elem.addEventListener('mouseenter', () => {
-            cursor.classList.add('cursor-hover');
-        });
-        elem.addEventListener('mouseleave', () => {
-            cursor.classList.remove('cursor-hover');
-        });
+        elem.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+        elem.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
     });
+
+
 };

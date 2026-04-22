@@ -823,6 +823,7 @@ h1 span {
     }
 }
 
+
 .footer {
     background: rgba(13, 0, 26, 0.95);
     padding: 5rem 8% 2rem;
@@ -954,6 +955,7 @@ h1 span {
     font-size: 4.5rem;
     line-height: 1.2;
 }
+
 .ex-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1047,34 +1049,62 @@ h1 span {
     }
 }
 
-/*---------------------------------------------scroll curser -----------*/
-
+/*---------------------------------------------scroll cursor -----------*/
 body, a, button {
     cursor: none !important;
 }
 
-#magic-cursor {
+/*#magic-cursor {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*    pointer-events: none;*/
+/*    z-index: 10000;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+
+/*.cursor-outer {*/
+/*    position: absolute;*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*    border: 2.0px solid #ff4d4d;*/
+/*    border-radius: 50%;*/
+/*}*/
+
+
+.cursor-dot {
+    width: 7px;
+    height: 7px;
+    background: #ff4d4d;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff4d4d;
+}
+
+
+.cursor-hover .cursor-outer {
+    border-color: #9d4edd;
+}
+
+.cursor-hover .cursor-dot {
+    background: #9d4edd;
+    box-shadow: 0 0 10px #9d4edd;
+}
+
+
+.trail-dot {
     position: fixed;
-    width: 30px;
-    height: 30px;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 77, 77, 0.6);
+    border-radius: 50%;
     pointer-events: none;
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(-30deg);
+    z-index: 9999;
+    transition: transform 0.5s linear, opacity 0.5s linear;
 }
 
 
-#magic-cursor i {
-    font-size: 24px;
-    color: #ff4d4d;
-    filter: drop-shadow(0 0 5px #ff4d4d) drop-shadow(0 0 15px #ff4d4d);
-    text-shadow: 0 0 10px rgba(255, 77, 77, 0.8);
-}
-
-
-.cursor-hover i {
-    color: #00ffff !important;
-    filter: drop-shadow(0 0 5px #00ffff) drop-shadow(0 0 15px #00ffff) !important;
-}
