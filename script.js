@@ -101,10 +101,10 @@ window.onload = () => {
     animate();
 
 
-    document.querySelectorAll('a, button').forEach(elem => {
-        elem.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
-        elem.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
-    });
+    // document.querySelectorAll('a, button').forEach(elem => {
+    //     elem.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+    //     elem.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+    // });
 
 
 };
