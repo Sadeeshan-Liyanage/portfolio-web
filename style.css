@@ -1050,9 +1050,9 @@ h1 span {
 }
 
 /*---------------------------------------------scroll cursor -----------*/
-body, a, button {
-    cursor: none !important;
-}
+/*body, a, button {*/
+/*    cursor: none !important;*/
+/*}*/
 
 #magic-cursor {
     position: fixed;
