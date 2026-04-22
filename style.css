@@ -1054,18 +1054,18 @@ body, a, button {
     cursor: none !important;
 }
 
-/*#magic-cursor {*/
-/*    position: fixed;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 30px;*/
-/*    height: 30px;*/
-/*    pointer-events: none;*/
-/*    z-index: 10000;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*}*/
+#magic-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 /*.cursor-outer {*/
