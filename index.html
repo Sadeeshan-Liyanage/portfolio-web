@@ -285,19 +285,19 @@
     const navLinks = document.querySelectorAll('.navbar a');
 
 
-    menuIcon.addEventListener('click', () => {
+    menuIcon.onclick = () => {
         navbar.classList.toggle('active');
         menuIcon.classList.toggle('fa-bars');
         menuIcon.classList.toggle('fa-xmark');
-    });
+    };
 
 
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.onclick = () => {
             navbar.classList.remove('active');
             menuIcon.classList.add('fa-bars');
             menuIcon.classList.remove('fa-xmark');
-        });
+        };
     });
 </script>
 </body>

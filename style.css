@@ -1060,9 +1060,9 @@ h1 span {
         position: absolute;
         top: 100%;
         right: 5%;
-        width: 100%;
+        width: 250px;
         background: rgba(13, 0, 26, 0.98);
-        backdrop-filter: blur(15px);
+        /*backdrop-filter: blur(15px);*/
         flex-direction: column;
         padding: 2rem 0;
         border-bottom: 2px solid var(--accent);
