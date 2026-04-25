@@ -279,16 +279,18 @@
   </main>
 
 
-  <script>
+<script>
     const menuIcon = document.getElementById('menu-icon');
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.navbar a');
 
+
     menuIcon.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-      menuIcon.classList.toggle('fa-bars');
-      menuIcon.classList.toggle('fa-xmark');
+        navbar.classList.toggle('active');
+        menuIcon.classList.toggle('fa-bars');
+        menuIcon.classList.toggle('fa-xmark');
     });
+
 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -297,7 +299,7 @@
             menuIcon.classList.remove('fa-xmark');
         });
     });
-  </script>
+</script>
 </body>
 </html>
 
