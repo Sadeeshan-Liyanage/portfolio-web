@@ -147,7 +147,7 @@ body {
   font-size: 3rem;
   color: var(--accent);
   cursor: pointer;
-  display: none;
+  display: block;
 }
 
 
@@ -1079,7 +1079,6 @@ h1 span {
 
 
     .navbar.active {
-        right: 0;
         display: flex;
         pointer-events: auto;
         animation: slideDown 0.3s ease-out;
