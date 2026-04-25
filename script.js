@@ -56,7 +56,7 @@ window.onload = () => {
 
 // ------------------------------------cursor----------------------------------------//
 
-    const cursor = document.getElementById('magic-cursor');
+    /*const cursor = document.getElementById('magic-cursor');
     const container = document.getElementById('particles-container');
 
     let mouseX = 0, mouseY = 0;
@@ -106,5 +106,5 @@ window.onload = () => {
         elem.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
     });
 
-
+*/
 };
