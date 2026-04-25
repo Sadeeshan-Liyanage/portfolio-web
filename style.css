@@ -1041,6 +1041,21 @@ h1 span {
 
 
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .navbar a {
+        margin: 1.5rem 0;
+    }
+
+    .btn-contact {
+        margin-left: 0;
+        width: fit-content;
+    }
+}
+/*@media (max-width: 768px) {
     .header {
         position: fixed;
         top: 0;
@@ -1068,7 +1083,7 @@ h1 span {
         right: 5%;
         width: 250px;
         background: rgba(13, 0, 26, 0.98);
-        /*backdrop-filter: blur(15px);*/
+        !*backdrop-filter: blur(15px);*!
         flex-direction: column;
         padding: 2rem 0;
         border-bottom: 2px solid var(--accent);
@@ -1104,7 +1119,7 @@ h1 span {
 @keyframes slideDown {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
-}
+}*/
 
 
 /*---------------------------------------------scroll cursor -----------*/
