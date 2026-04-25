@@ -1048,6 +1048,54 @@ h1 span {
         margin: 0 auto;
     }
 }
+@media (max-width: 768px) {
+    /* Header එක ඇතුළේ items දෙපැත්තට කරන්න */
+    .header {
+        padding: 2rem 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Menu icon එක අනිවාර්යයෙන් පෙනෙන්න සැලැස්වීම */
+    .menu-icon {
+        display: block !important;
+        z-index: 1001;
+        font-size: 3.5rem; /* පොඩ්ඩක් ලොකු කළා පහසුවට */
+    }
+
+    /* Navbar එක හරියටම පෙනෙන්න සැකසීම */
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(13, 0, 26, 0.98);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        padding: 2rem 0;
+        border-bottom: 2px solid var(--accent);
+        display: none; /* Default hide */
+    }
+
+    .navbar.active {
+        display: flex; /* Active වූ විට පමණක් පෙන්වන්න */
+    }
+
+    .navbar a {
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        display: block;
+        width: 100%;
+    }
+
+    /* Hero section එකේ mobile spacing */
+    .hero {
+        padding-top: 15rem;
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
 /*---------------------------------------------scroll cursor -----------*/
 /*
