@@ -1041,7 +1041,7 @@ h1 span {
 
 
 @media (max-width: 768px) {
-    /* Header එක ඇතුළේ items දෙපැත්තට කරන්න */
+
     .header {
         padding: 2rem 5%;
         display: flex;
@@ -1049,14 +1049,12 @@ h1 span {
         align-items: center;
     }
 
-    /* Menu icon එක අනිවාර්යයෙන් පෙනෙන්න සැලැස්වීම */
     .menu-icon {
         display: block !important;
         z-index: 1001;
         font-size: 3.5rem; /* පොඩ්ඩක් ලොකු කළා පහසුවට */
     }
 
-    /* Navbar එක හරියටම පෙනෙන්න සැකසීම */
     .navbar {
         position: absolute;
         top: 100%;
@@ -1071,7 +1069,7 @@ h1 span {
     }
 
     .navbar.active {
-        display: flex; /* Active වූ විට පමණක් පෙන්වන්න */
+        display: flex;
     }
 
     .navbar a {
@@ -1081,7 +1079,7 @@ h1 span {
         width: 100%;
     }
 
-    /* Hero section එකේ mobile spacing */
+
     .hero {
         padding-top: 15rem;
         flex-direction: column;
