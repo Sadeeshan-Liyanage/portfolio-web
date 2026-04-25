@@ -147,7 +147,7 @@ body {
   font-size: 3rem;
   color: var(--accent);
   cursor: pointer;
-  display: block;
+  display: none;
 }
 
 
@@ -1041,27 +1041,62 @@ h1 span {
 
 
 @media (max-width: 768px) {
-    .navbar {
+    .header {
         position: fixed;
         top: 0;
-        right: 0;
-        width: 250px;
-        height: 100vh;
-        background: #0b0015; /* or your color */
-
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 5%;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        gap: 20px;
-
-        transform: translateX(100%); /* ❗ hidden state */
-        transition: 0.3s ease;
-        z-index: 1000;
+        background: rgba(13, 0, 26, 0.95);
+        z-index: 10000;
     }
 
+    .menu-icon {
+        display: block !important;
+        z-index: 1001;
+        font-size: 3.5rem;
+        cursor: pointer;
+    }
+
+
+    .navbar {
+        position: fixed;
+        top: 100%;
+        right: 5%;
+        width: 250px;
+        background: rgba(13, 0, 26, 0.98);
+        /*backdrop-filter: blur(15px);*/
+        flex-direction: column;
+        padding: 2rem 0;
+        border-bottom: 2px solid var(--accent);
+        display: none;
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+
     .navbar.active {
-        transform: translateX(0); /* ❗ show */
+        display: flex;
+        pointer-events: auto;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .navbar a {
+        margin: 1.5rem 0;
+        font-size: 2.2rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-left: 2rem;
+    }
+
+    .hero {
+        padding-top: 15rem;
+        flex-direction: column;
+        text-align: center;
     }
 
 
