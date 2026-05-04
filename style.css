@@ -36,6 +36,74 @@ body {
 ::-webkit-scrollbar {
   width: 14px;
 }
+.hero-content {
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+.hero-content h1 {
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.tagline {
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.cta-group {
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Page load animations ── */
+/*.header       { animation: slideDown 0.6s ease both; }*/
+/*.hero-content { animation: fadeUp 0.8s 0.3s ease both; }*/
+/*.hero-image   { animation: fadeIn 1s 0.5s ease both; }*/
+
+
+.hero-image img {
+    animation: floatBob 4s ease-in-out infinite;
+}
+@keyframes floatBob {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-14px); }
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(234, 95, 95, 0.5); }
+    50%       { box-shadow: 0 0 0 12px rgba(234, 95, 95, 0); }
+}
+
+
+@media (max-width: 768px) {
+    .menu-icon { display: block; }
+    .navbar {
+        position: fixed; top: 70px; right: 0;
+        width: 220px; height: 100vh;
+        background: rgba(13, 0, 26, 0.95);
+        flex-direction: column; align-items: flex-start;
+        padding: 2rem; gap: 1.5rem;
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        display: flex;
+    }
+    .navbar.open { transform: translateX(0); }
+    .navbar a { margin: 0; font-size: 1.8rem; }
+}
+
+
 
 ::-webkit-scrollbar-track {
   background: rgba(20, 10, 40, 0.6);
@@ -167,6 +235,45 @@ body {
   min-width: 320px;
 }
 
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero-content, .hero-image {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
 .greeting {
   font-size: 2.2rem;
   color: var(--text-muted);
@@ -211,6 +318,7 @@ h1 span {
   font-weight: 600;
   text-decoration: none;
   transition: all 0.4s;
+  animation: pulse 2.5s 2s ease-in-out infinite;
 }
 
 .primary {
@@ -275,8 +383,14 @@ h1 span {
   max-width: 420px;
   border-radius: 2.4rem;
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  transition: 0.4s;
+  overflow: hidden;
 }
 
+.about-image img:hover {
+    transform: translateY(-15px) scale(1.05);
+    transform: scale(1.1) rotate(2);
+}
 .about-text {
   flex: 1;
   min-width: 340px;
@@ -379,8 +493,10 @@ h1 span {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
     border-color: var(--accent);
+    transform: translateY(-10px) scale(1.05);
+    transform: scale(1.1) rotate(2);
+    box-shadow: 0 5px 15px rgba(234, 95, 95, 0.4);
 }
 
 .project-card img {
@@ -493,6 +609,7 @@ h1 span {
     margin-top: auto;
     border: none;
     cursor: pointer;
+    animation: pulse 2.5s 2s ease-in-out infinite;
 }
 
 .btn-view-code .arrow-icon {
@@ -793,6 +910,7 @@ h1 span {
     cursor: pointer;
     margin-top: 1rem;
     transition: 0.4s ease;
+    animation: pulse 2.5s 2s ease-in-out infinite;
 }
 
 .btn-send:hover {
@@ -1022,6 +1140,7 @@ h1 span {
     background: transparent;
     border: 1px solid var(--text-muted);
     color: var(--text);
+    animation: pulse 2.5s 2s ease-in-out infinite;
 }
 
 .btn-review:hover {
@@ -1055,6 +1174,34 @@ h1 span {
         width: fit-content;
     }
 }
+
+/* Image container එක සඳහා styles */
+.ex-image {
+    width: 100%;
+    height: 180px; /* ඔබට අවශ්‍ය ප්‍රමාණයට වෙනස් කරන්න */
+    overflow: hidden;
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+}
+
+.ex-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* image එක stretch නොවී ලස්සනට පෙනීමට */
+    transition: transform 0.5s ease;
+}
+
+/* Card එක උඩට mouse එක ගෙනියද්දී image එක zoom වීම */
+.ex-card:hover .ex-image img {
+    transform: scale(1.1);
+}
+
+/* Card එකේ පරතරය නිවැරදි කිරීමට හෙඩිම ටිකක් පහත් කිරීම */
+.ex-card h3 {
+    margin-top: 0.5rem;
+}
+
+
 /*@media (max-width: 768px) {
     .header {
         position: fixed;
