@@ -83,21 +83,6 @@ body {
 }
 
 
-@media (max-width: 768px) {
-    .menu-icon { display: block; }
-    .navbar {
-        position: fixed; top: 70px; right: 0;
-        width: 220px; height: 100vh;
-        background: rgba(13, 0, 26, 0.95);
-        flex-direction: column; align-items: flex-start;
-        padding: 2rem; gap: 1.5rem;
-        transform: translateX(100%);
-        transition: transform 0.4s ease;
-        display: flex;
-    }
-    .navbar.open { transform: translateX(0); }
-    .navbar a { margin: 0; font-size: 1.8rem; }
-}
 
 
 
